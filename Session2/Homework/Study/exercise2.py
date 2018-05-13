@@ -11,7 +11,6 @@ password = "mlab_admin"
 
 def connect():
     mongoengine.connect(db_name, host=host, port=port, username=user_name, password=password)
-
 connect()
 
 class Service(Document):
@@ -23,18 +22,26 @@ class Service(Document):
     address = StringField()
     status = BooleanField()
 
-all_service = Service.objects(id = "5af5a7739f880b0d90e126ae") # Có thể filter dữ liệu tại đây !
+def remove_document(id_revmove):
+    Service.objects(id = "{0}".format(id_revmove)).delete()
+
+all_service = Service.objects() # Có thể filter dữ liệu tại đây !
 
 fist_service = all_service[0]
 
-for index, service in enumerate(all_service):
-    print(service["id"])
-    print(service["name"])
-    print(service["yob"])
-    print(service["gender"])
-    print(service["height"])
-    print(service["phone"])
-    print(service["address"])
-    print(service["status"])
-    if index == 9:
-        break
+def nine_item():
+    for index, service in enumerate(all_service):
+        print(service["id"])
+        print(service["name"])
+        print(service["yob"])
+        print(service["gender"])
+        print(service["height"])
+        print(service["phone"])
+        print(service["address"])
+        print(service["status"])
+        print()
+        if index == 9:
+            break
+nine_item()
+remove_choice = input("Nhập vào ID muốn xóa: ")
+remove_document(remove_choice)
