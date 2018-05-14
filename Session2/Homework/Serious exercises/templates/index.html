@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Show 10 Male Not-Yet Contacted!</title>
+</head>
+<body>
+    <div>
+        {%for male in show_male%}
+                <p>Name: {{ male.name}}</p>
+                <p>Gender: {{ male.gender}}</p>
+                <p>Email: {{ male.email}}</p>
+                <p>Phone: {{ male.phone}}</p>
+                <p>Company: {{ male.company}}</p>
+                <p>Contacted: {{ male.contacted}}</p>
+                <hr>
+        {%endfor%}
+</div>
+</body>
+</html>
