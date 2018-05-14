@@ -16,6 +16,7 @@ app = Flask(__name__)
 @app.route('/')
 def show_10_male():
     show_male = Customer.objects(gender = 1, contacted = 0)
+    show_male = show_male[:10]
     return render_template('index.html', show_male = show_male)
 
 @app.route('/customer')
