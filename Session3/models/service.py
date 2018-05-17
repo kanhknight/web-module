@@ -9,3 +9,4 @@ class Service(Document):
     image = StringField()
     description = StringField()
     measurements = ListField()
+    gender = IntField()
