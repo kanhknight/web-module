@@ -12,14 +12,20 @@ class River(Document):
     continent = StringField()
     length = IntField()
 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 @app.route('/africa')
 def africa():
-    all_river = River.objects(continent = "Africa")
-    return render_template('river.html', all_river = all_river)
+    continent = "Africa"
+    all_river = River.objects(continent = continent)
+    return render_template('river.html', all_river = all_river, continent = continent)
 @app.route('/america')
 def america():
-    all_river = River.objects(continent = "S. America", length__gt = 1000)
-    return render_template('river.html', all_river = all_river)
+    continent = "S. America"
+    all_river = River.objects(continent = continent, length__gt = 1000)
+    return render_template('river.html', all_river = all_river, continent = continent)
 
 if __name__ == '__main__':
   app.run(host='127.0.0.1', port=8000, debug=True)

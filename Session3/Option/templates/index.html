@@ -3,18 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>River!!!!!!</title>
+    <title>River</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
 <body>
-    <h1>All River in {{continent}}!</h1>
-    {%for river in all_river%}
-    <p><b>Name: </b>{{river.name}}</p>
-    <p><b>Continent: </b>{{river.continent}}</p>
-    <p><b>Length: </b>{{river.length}}</p>
-    <hr>
-    {%endfor%}
+   <ul>
+       <li>
+            <a href="/africa"> <b>Africa</b></a>
+       </li>
+       <li>
+            <a href="/america"> <b>America</b></a>
+       </li>
+   </ul> 
 </body>
 </html>
