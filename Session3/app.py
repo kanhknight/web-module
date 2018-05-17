@@ -17,6 +17,19 @@ def index():
     all_service = Service.objects()
     return render_template('service.html', all_service = all_service)
 
+@app.route('/update-service/<service_id>', methods = ['GET', 'POST'])
+def capnhat(service_id):
+    capnhatdv = Service.objects.with_id(service_id)
+    if request.method == 'GET':
+        return render_template('/update_service.html', capnhatdv = capnhatdv)
+    elif request.method == 'POST':
+        form_data = request.form
+        name = form_data['name']
+        yob = form_data['yob']
+        capnhatdv.update(set__name = name, set__yob = yob)
+        capnhatdv.reload()
+        return redirect('/admin')
+
 @app.route('/detail/<id_chitiet>')
 def detail(id_chitiet):
     chitiet = Service.objects.with_id(id_chitiet)
@@ -53,6 +66,12 @@ def create():
             )
         new_service.save()
     return redirect('/service')
+
+@app.route('/admin')
+def admin():
+    all_service = Service.objects()
+    return render_template('admin.html', all_service = all_service)
+
 if __name__ == '__main__':
   app.run(host='127.0.0.1', port=8000, debug=True)
  
