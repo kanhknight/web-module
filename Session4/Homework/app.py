@@ -61,7 +61,7 @@ def signup():
 
 @app.route('/success')
 def success():
-    return "Register Success!"
+    return redirect('/')
 
 
 @app.route('/welcome')
