@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
+    <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
+    <title>floatThead | Materialize - Material Design Admin Template</title>
+    <!-- Favicons-->
+    <link rel="icon" href="../static/images/favicon/favicon-32x32.png" sizes="32x32">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="../static/images/favicon/apple-touch-icon-152x152.png">
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#00bcd4">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <!-- For Windows Phone -->
+    <!-- CORE CSS-->
+    <link href="../static/css/themes/collapsible-menu/materialize.css" type="text/css" rel="stylesheet">
+    <link href="../static/css/themes/collapsible-menu/style.css" type="text/css" rel="stylesheet">
+    <!-- Custome CSS-->
+    <link href="../static/css/custom/custom.css" type="text/css" rel="stylesheet">
+    <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+    <link href="../static/vendors/prism/prism.css" type="text/css" rel="stylesheet">
+    <link href="../static/vendors/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet">
+    <link href="../static/vendors/jquery.nestable/nestable.css" type="text/css" rel="stylesheet">
+    <link href="../static/vendors/flag-icon/css/flag-icon.min.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Start Page Loading -->
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+    <!-- End Page Loading -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- START HEADER -->
+    <header id="header" class="page-topbar">
+      <!-- start header nav-->
+      <div class="navbar-fixed">
+        <nav class="navbar-color gradient-45deg-purple-deep-orange gradient-shadow">
+          <div class="nav-wrapper">
+            <div class="header-search-wrapper hide-on-med-and-down sideNav-lock">
+              <i class="material-icons">search</i>
+              <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Search Service" />
+            </div>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen">
+                  <i class="material-icons">settings_overscan</i>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);" class="waves-effect waves-block waves-light profile-button" data-activates="profile-dropdown">
+                  <span class="avatar-status avatar-online">
+                    <img src="../static/images/avatar/avatar-7.png" alt="avatar">
+                    <i></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse">
+                  <i class="material-icons">format_indent_increase</i>
+                </a>
+              </li>
+            </ul>
+            
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- END HEADER -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- START MAIN -->
+    <div id="main">
+      <!-- START WRAPPER -->
+      <div class="wrapper">
+        <!-- START LEFT SIDEBAR NAV-->
+        <aside id="left-sidebar-nav" class="nav-expanded nav-lock nav-collapsible">
+          <div class="brand-sidebar">
+            <h1 class="logo-wrapper">
+              <a href="/" class="brand-logo darken-1">
+                <!-- <img src="../static/images/logo/materialize-logo.png" alt="materialize logo"> -->
+                <span class="logo-text hide-on-med-and-down">Pilot App</span>
+              </a>
+              <a href="#" class="navbar-toggler">
+                <i class="material-icons">radio_button_checked</i>
+              </a>
+            </h1>
+          </div>
+          <ul id="slide-out" class="side-nav fixed leftside-navigation">
+            <li class="li-hover">
+              <p class="ultra-small margin more-text">MORE</p>
+            </li>
+            <li>
+              <a href="/">
+                <i class="material-icons">verified_user</i>
+                <span class="nav-text">Menu</span>
+              </a>
+            </li>
+          </ul>
+          <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only gradient-45deg-light-blue-cyan gradient-shadow">
+            <i class="material-icons">menu</i>
+          </a>
+        </aside>
+        <!-- END LEFT SIDEBAR NAV-->
+        <!-- //////////////////////////////////////////////////////////////////////////// -->
+        <!-- START CONTENT -->
+        <section id="content">
+          <!--breadcrumbs start-->
+          <div id="breadcrumbs-wrapper">
+            <!-- Search for small screen -->
+            <div class="header-search-wrapper grey lighten-2 hide-on-large-only">
+              <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Explore Materialize">
+            </div>
+          </div>
+          <!--breadcrumbs end-->
+          <!--start container-->
+          <div class="container">
+            <div class="divider"></div>
+            <!--floatThead-->
+            <div id="floatThead" class="section">
+              <div class="row">
+                <div class="col s12">
+                  <h4 class="header">PilotApp Services Details</h4>
+                </div>
+                <div class="col s12">
+                  <b>Name:</b> {{detail.name}}<br>
+                  <b>Username:</b> {{detail.username}}<br>
+                  <b>Phone:</b> {{detail.phone}}<br>
+                  <b>Email:</b> {{detail.email}}<br>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end container-->
+        </section>
+        <!-- END CONTENT -->
+        <!-- //////////////////////////////////////////////////////////////////////////// -->
+        
+      </div>
+      <!-- END WRAPPER -->
+    </div>
+    <!-- END MAIN -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- START FOOTER -->
+    <footer class="page-footer gradient-45deg-purple-deep-orange">
+      <div class="footer-copyright">
+        <div class="container">
+          <span>Copyright ©
+            <script type="text/javascript">
+              document.write(new Date().getFullYear());
+            </script> <a class="grey-text text-lighten-4" href="http://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" target="_blank">Pilotapp</a> All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER -->
+    <!-- ================================================
+    Scripts
+    ================================================ -->
+    <!-- jQuery Library -->
+    <script type="text/javascript" src="../static/vendors/jquery-3.2.1.min.js"></script>
+    <!--angularjs-->
+    <script type="text/javascript" src="../static/vendors/angular.min.js"></script>
+    <!--materialize js-->
+    <script type="text/javascript" src="../static/js/materialize.min.js"></script>
+    <!--prism -->
+    <script type="text/javascript" src="../static/vendors/prism/prism.js"></script>
+    <!--scrollbar-->
+    <script type="text/javascript" src="../static/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <!--floatThead -->
+    <script type="text/javascript" src="../static/vendors/floatThead/jquery.floatThead.min.js"></script>
+    <script type="text/javascript" src="../static/vendors/floatThead/jquery.floatThead-slim.min.js"></script>
+    <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+    <script type="text/javascript" src="../static/js/plugins.js"></script>
+    <!--table-floatThead.js - Page Specific JS codes-->
+    <script type="text/javascript" src="../static/js/scripts/table-floatThead.js"></script>
+    <!--custom-script.js - Add your own theme custom JS-->
+    <script type="text/javascript" src="../static/js/custom-script.js"></script>
+  </body>
+</html>

@@ -11,7 +11,8 @@ app.secret_key = "day la chuoi bi mat duoc khai bao de su dung voi session dang 
 @app.route('/', methods = ['GET', 'POST'])
 def index():
     if request.method == "GET":
-        return render_template('user-login.html')
+        all_user = User.objects()
+        return render_template('index.html', all_user = all_user)
     elif request.method == "POST":
         form = request.form
         username = form['username']
@@ -32,7 +33,7 @@ def signin():
         password = form['password']
         if username == "admin" and password == "admin":
             session['loggedin'] = True
-            return redirect(url_for("welcome"))
+            return redirect('/')
         else:
             return redirect(url_for("signup"))
 
@@ -70,6 +71,15 @@ def welcome():
     else:
         return redirect(url_for("signin"))
 
+@app.route('/service_detail/<user_id>')
+def service_detail(user_id):
+    if "loggedin" in session:
+        detail = User.objects.with_id(user_id)
+        return render_template('service-detail.html', detail = detail)
+    else:
+        return redirect('/sign-in')
+
+
 @app.route('/logout')
 def logout():
     if session['loggedin'] == True:
@@ -79,5 +89,5 @@ def logout():
         return "What are you doing !"
 
 if __name__ == '__main__':
-  app.run(host='127.0.0.1', port=8000, debug=False)
+  app.run(host='127.0.0.1', port=8000, debug=True)
  
