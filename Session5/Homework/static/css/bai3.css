@@ -179,14 +179,27 @@
 }
 
 .right-container-top-2-item{
-    background-color: darkgreen;
+    background-color: #59e6c31c;
     width:25%;
     height: 80px;
+    color: #00b0ff;
+    padding: 10px;
+}
+
+.right-container-top-2-item-title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.right-container-top-2-item-content{
+    font-style: italic;
+    font-size: 12px;
+    margin-top: 1px;
 }
 
 .border-white{
     border-right: 1px solid;
-    border-right-color: white;
+    border-right-color: rgb(135, 252, 236);
 }
 
 .right-container-middle{
