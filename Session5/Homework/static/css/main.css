@@ -1,0 +1,32 @@
+.container{
+    height: 400px;
+    width: 100%;
+    background: url(https://www.open.edu.au/student-blog/wp-content/uploads/2016/10/study-over-summer.jpg);
+    background-repeat: no-repeat;
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+.teacher-title{
+    width: 100%;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+.teachers{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.teacher-member-avatar{
+    border: thin solid transparent;
+    border-radius: 50%;
+}
+
+.teacher-member-name{
+    text-align: center;
+    color: white;
+}
