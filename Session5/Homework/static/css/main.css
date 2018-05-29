@@ -6,6 +6,7 @@
     font-family: 'Encode Sans Condensed', sans-serif;
     display: flex;
     justify-content: center;
+    background-position: center;
 }
 
 .teacher-title{
