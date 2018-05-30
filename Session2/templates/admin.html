@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin !</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Danh sách service</h1>
+    <table border="1px">
+        <tr>
+            <th>Số Thứ Tự</th>
+            <th>Họ Tên</th>
+            <th>Năm Sinh</th>
+            <th>Giới tính</th>
+            <th>Chiều cao</th>
+            <th>Số điện thoại</th>
+            <th>Địa chỉ</th>
+            <th>Tình trạng</th>
+            <th>Action</th>
+        </tr>
+        {%set a = 0%}
+        {%for service in all_service%}
+        <tr>
+            <td>
+               {{loop.index}}
+            </td>
+            <td>
+                {{ service.name}}
+            </td>
+            <td>
+                {{ service.yob}}
+            </td>
+            <td>
+                <!-- {%if service.gender == 0%}
+                    Nữ
+                {%else%}
+                    Nam
+                {%endif%} -->
+                {{
+                    "Nam" if service.gender ==1 else "Nữ"
+                }}
+            </td>
+            <td>
+                {{ service.height}}
+            </td>
+            <td>
+                {{ service.phone}}
+            </td>
+            <td>
+                {{ service.address}}
+            </td>
+            <td>
+                <!-- {%if service.status == True%}
+                    Bận
+                {%else%}
+                    Rảnh
+                {%endif%} -->
+                {{ "Rảnh" if service.status else "Bận"}}
+            </td>
+            <td>
+                <a href="#">Sửa</a>
+                <a href="{{url_for('delete_document', service_id = service.id)}}">Xóa</a>
+            </td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>

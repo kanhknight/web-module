@@ -1,0 +1,50 @@
+.h-600px{
+    height: 600px;
+}
+
+.h-100px{
+    height: 100px;
+}
+
+.font-lobster{
+    font-family: 'Lobster', cursive;
+}
+
+.font-size-30px{
+    font-size: 20px;
+}
+
+.mb-150px{
+    margin-bottom: 150px;
+    text-align: left;
+}
+
+.pd-50px{
+    padding: 50px 0px;
+}
+
+.container-image{
+    position: relative;
+}
+
+.mb-100px{
+    position: absolute; 
+    /* margin-bottom: 100px; */
+    top:100px;
+}
+
+
+.text-image-block{
+    position: absolute;
+    color: white;
+    font-weight: bold;
+}
+
+.text-image-block-right{
+    bottom: 20%;
+    right: 20%;
+}
+.text-image-block-left{
+    bottom: 20%;
+    right: 80%;
+}
